@@ -1,0 +1,36 @@
+{% extends "base_template.html" %}
+
+{% block title %}Readers Paradise - History{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-sm">
+        <h2> Past Purchases </h2>
+        <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Book</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Date</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for i in range(myBooksLen) %}
+              <tr>
+                <th scope="row">{{ i + 1 }}</th>
+                <td><img src="/Static/Images/{{ myBooks[i]["image"] }}" width="30px" alt="{{ myBooks[i]["team"] }}" /></td>
+                <td>{{ myBooks[i]["quantity"] }}</td>
+                <td>{{ myBooks[i]["date"] }}</td>
+                <td><a href="/filter/?id={{ myBooks[i]["id"] }}"><button type="button" class="btn btn-warning">Purchase Again</button></a></td>
+              </tr>
+            </tbody>
+            {% endfor %}
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+        </div>
+{% endblock %}

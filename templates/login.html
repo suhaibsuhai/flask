@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="{{ url_for('static',filename='CSS/styles.css') }}" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <title>Readers Paradise - Sign In</title>   
+    </head>
+    <body>
+        <header>
+            <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-sm box-shadow">
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <strong><i class="far fa-futbol"></i>Readers Paradise</strong>
+                </a>
+            </nav>
+        </header> 
+        <br/>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h2>Sign In to Buy</h2>
+                        <div>
+                            <form action="/logged/" class="form" method="post">
+                                <div>
+                                    <input type="text" name="uname" autofocus placeholder="uname">
+                                    <input type="password" name="pwd" placeholder="pwd">
+                                    <button type="submit" class="btn btn-primary">Sign In</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

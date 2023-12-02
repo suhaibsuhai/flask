@@ -1,0 +1,38 @@
+{% extends "base_template.html" %}
+{% block title %}Readers Paradise - Home{% endblock %}
+
+{% block body %}
+<div class="row" id="bookCard">
+    {% for i in range(booksLen) %}
+    <div class="col-sm">
+        <div class="card text-center">
+            <div class="card-body">
+                <form action="/buy/" methods="POST">
+                    <img src="/static/Images/{{books[i]["image"]}}" class="book" alt="" />
+                    <h5 class="card-title">{{books[i]["kind"]}}</h5>
+                    {% if books[i]["onSale"] %}
+                    <img src="/static/Images/sale.png" width="26px" />
+                    <h4 class="card-text price" style="color:red; display:inline">{{ '{:,.2f}'.format(books[i]["onSalePrice"]) }}</h4>
+                    {% else %}
+                    <h4 class="card-text price">{{ '{:,.2f}'.format(books[i]["price"]) }}</h4>
+                    {% endif %}
+                    <div class="stepper-input">
+                        <span class="decrement target">-</span>
+                        <input class="quantity" name="quantity" value='0' />
+                        <span class="increment target">+</span>
+                    </div>
+                    <input type="hidden" name="id" value="{{books[i]["id"]}}" />
+                    {% if not session %}
+                    <input type="hidden" name="loggedin" value="0" />
+                    {% else %}
+                    <input type="hidden" name="loggedin" value="1" />
+                    {% endif %}
+                    <input type="submit" class="btn btn-primary addToCart" value="Add To Cart" /><br /><br />
+                    <div class="alert alert-danger flashMessage" style="text-align: center; display:none; font-size:0.9em;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
