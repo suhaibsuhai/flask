@@ -8,10 +8,10 @@
         <div class="card text-center">
             <div class="card-body">
                 <form action="/buy/" methods="POST">
-                    <img src="/static/Images/{{books[i]["image"]}}" class="book" alt="" />
+                    <img src="/Static/Images/{{books[i]["image"]}}" class="book" alt="" />
                     <h5 class="card-title">{{books[i]["kind"]}}</h5>
                     {% if books[i]["onSale"] %}
-                    <img src="/static/Images/sale.png" width="26px" />
+                    <img src="/Static/Images/sale.png" width="26px" />
                     <h4 class="card-text price" style="color:red; display:inline">{{ '{:,.2f}'.format(books[i]["onSalePrice"]) }}</h4>
                     {% else %}
                     <h4 class="card-text price">{{ '{:,.2f}'.format(books[i]["price"]) }}</h4>
