@@ -1,0 +1,219 @@
+.card {
+    margin-bottom: 1.2em;
+}
+
+.card:hover {
+    border-color: #246015;
+    box-shadow: 2px 2px #dedddd;
+}
+
+.modal-header {
+    border-bottom: 0px;
+}
+
+.counter {
+    font-size: 0.5em;
+    margin-left: 1.2em;
+    font-weight: bold;
+}
+
+header {
+    margin-bottom: 45px;
+}
+
+.price {
+    color: rgb(25, 104, 59);
+    font-weight: bold;    
+}
+
+.price:before {
+    content: '$';
+}
+
+.checkout {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.add {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+
+
+.add:hover {
+    background-color: rgb(141, 182, 196);
+    border-color: rgb(141, 182, 196);
+}
+
+.increment,
+.decrement{
+        height: 24px;
+        width: 24px;
+        border: 1px solid #222;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 50%;
+        text-decoration: none;
+        color: #222;
+        font-size: 24px;
+        line-height: 22px;
+        display: inline-block;
+        cursor: pointer;             
+    }
+
+    .stepper-input{
+        display: flex;
+        display: -webkit-flex;
+        color: #222;
+        max-width: 120px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .book{
+        margin-bottom: 10px;
+    width: 200px;
+    }
+
+    .bookcart{
+        width: 25px;
+    }
+
+.decrement:hover, 
+.increment:hover {
+    color: green;  
+}
+
+.decrement:active, 
+.increment:active {    
+    background-color: green; 
+    color: white;  
+}
+
+
+.quantity{
+        height: 24px;
+        width: 48px;
+        text-align: center;
+        margin: 0 12px;
+        border-radius: 2px;
+        border: 1px solid #222;
+        
+}
+
+tr {
+    text-align: center;
+}
+
+/* Modify again */
+.topbar
+{
+    width:100vw;
+    height:7vh;
+    background-color: #343A40;
+    position: fixed;
+    top: 50px;
+    z-index:1;
+}
+.topbar marquee
+{
+    color: white;
+    font-size:18px;
+    font-style: italic;
+}
+.top
+{
+    margin-top:50px;
+}
+#form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#form input,#form button
+{
+    width:250px;
+    margin-bottom:20px;
+    border-radius:10px;
+    border-style:none;
+    text-indent:10px;
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:70vw;
+    position: relative;
+
+}
+.top
+{
+    margin-top:80px;
+}
+.lineheading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    font-weight: bold;
+    font-size:1em;
+    text-align: center;
+}
+.lineheading hr
+{
+    width:30vw;
+    color: black;
+    height:2px;
+}
+.flex form input
+{
+    width:250px;
+    margin-bottom:10px;
+    border-radius:10px;
+    border-style:none;
+    text-indent:10px;
+    background-color: #dedddd;
+}
+.fixed
+{
+    position:absolute;
+    margin-left:260px;
+    margin-top:-60px;
+}
+footer
+{
+    background-color: #343A40;
+    width:100vw;
+    bottom:0px;
+    height: auto;
+    display: flex;
+    margin-top:50px;
+}
+footer .column
+{
+    margin-top:20px;
+    margin-left:70px;
+    height:100%;
+    margin-bottom:20px;
+    color: aliceblue;
+}
+footer .column h4
+{
+    font-size:12px;
+    margin-top:15px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
