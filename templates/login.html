@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='CSS/styles.css') }}" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>DressDash - Sign In</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-dark bg-dark box-shadow">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+                <strong><i class="far fa-futbol"></i>DressDash</strong>
+            </a>
+            <button class="navbar-toggler" style="display:inline" type="button" data-toggle="modal"
+                data-target="#modalCenter">
+                <span class="glyphicon glyphicon-shopping-cart" data-toggle="modal" data-target=""
+                    style="font-size:18px;">
+                    <a href="/adminlogin/"> Admin</a>
+                </span>
+            </button>
+        </nav>
+    </header>
+    <br />
+    <main>
+        <div class="container top">
+            <div class="row justify-content-center">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="text-center">Sign In to Buy</h2>
+                        </div>
+                        <div class="card-body">
+                            <form action="/logged/" class="form" method="post" id="form">
+                                <div class="form-group">
+                                    <label for="uname">Username:</label>
+                                    <input type="text" name="uname" id="uname" class="form-control" autofocus
+                                        placeholder="Enter your username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" name="pwd" id="pwd" class="form-control"
+                                        placeholder="Enter your password">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                                <p class="text-center mt-3">Don't have an account? <a href="/signup/">Sign Up</a></p>
+                                <h3 class="text-danger text-center">{{msg}}</h3>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

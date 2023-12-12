@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>DressDash - Sign Up</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 16px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        main {
+            padding: 70px 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+        span {
+            font-size: 10px; 
+            padding: 3px; 
+            margin: 0; 
+        }
+        form {
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+        button{
+            margin-right: 5px;
+        }
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 46px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <a href="/" class="navbar-brand"><strong><i class="far fa-futbol"></i>DressDash- Sign Up</strong></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-sm mx-auto">
+                    <h2>Create Account</h2>
+                    <p>{{msg}}</p>
+                    <form action="/register/" class="form" method="post">
+                        <div class="form-group">
+                            <input type="text" name="uname" id="uname" class="form-control" placeholder="User Name"
+                                autofocus required>
+                            <span id="user-msg" class="alert alert-danger mt-2"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name"
+                                required>
+                            <span id="fname-msg" class="alert alert-danger "></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name"
+                                required>
+                            <span id="lname-msg" class="alert alert-danger "></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email Address"
+                                required>
+                            <span id="email-msg" class="alert alert-danger "></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Password"
+                                required>
+                            <span id="password-msg" class="alert alert-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="confirmpwd" id="confirmpwd" class="form-control"
+                                placeholder="Confirm Password" required>
+                            <span id="confirm-msg" class="alert alert-danger "></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="reset" class="btn btn-secondary">Clear</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                            <p class="text-center mt-3">Already have an account? <a href="/login/">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='JS/validation.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha384-o5B3w6FKRZC/P8qz5bAJF2PLCrZSVpKTGeEEZSXTa/r0tEjhUURiY3cVWRSJlsvl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-pzjw8rnLlfo/b4q0r5mDOJSVLXC05VP0zky1eI9sbeF5Cg2J1QrgjRSz0EXaURaB"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
