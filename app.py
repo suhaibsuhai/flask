@@ -36,7 +36,7 @@ def index():
             totItems += shoppingCart[i]["SUM(qty)"]
         Dresses = db.execute("SELECT * FROM Dresses")
         DressesLen = len(Dresses)
-        return render_template ("userhomepage.html", shoppingCart=shoppingCart, Dresses=Dresses, shopLen=shopLen, DressesLen=DressesLen, total=total, totItems=totItems, display=display, session=session )
+        return render_template ("index.html", shoppingCart=shoppingCart, Dresses=Dresses, shopLen=shopLen, DressesLen=DressesLen, total=total, totItems=totItems, display=display, session=session )
 
     return render_template ("index.html", Dresses=Dresses, shoppingCart=shoppingCart, DressesLen=DressesLen, shopLen=shopLen, total=total, totItems=totItems, display=display)
 
